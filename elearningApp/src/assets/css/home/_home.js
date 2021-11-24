@@ -91,7 +91,7 @@ export const styles = StyleSheet.create({
    },
    btnSearch:{
       width:moderateScale(60),
-      backgroundColor:setting.backgroundBlue,
+      backgroundColor:"#009da6",
       borderBottomRightRadius:moderateScale(40),
       borderTopRightRadius:moderateScale(40),
       height:moderateScale(45),
