@@ -14,13 +14,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import AsyncStorage from '@react-native-community/async-storage';
 import { Menu } from "native-base"
 import Icon from 'react-native-vector-icons/Ionicons'
-import Logo from '../../assets/images/icon/logoHl_white.png'
 import {getApiProfile} from '../../redux/auth/action'
-// import Logo from '../../assets/images/logo_hoplong.png'
 import { logOut } from '../../redux/auth/action'
 import { styles } from '../../assets/css/home/_home'
 import { moderateScale, width, height } from '../../utilities/size'
-import { dataSkillCourse, dataProductCourse } from '../../utilities/datavirtual'
+import { dataActionPhim, dataProductCourse } from '../../utilities/datavirtual'
 
 const Home = ({navigation}) => {
    const dispatch = useDispatch()
@@ -82,16 +80,16 @@ const Home = ({navigation}) => {
                         </Menu.Item>
                      </Menu>
                   </View>
-                  <Image source={Logo} style={styles.imageLogo} />
-                  <Text style={styles.introTitle}>E-LEARNING</Text>
+                  {/* <Image source={Logo} style={styles.imageLogo} /> */}
+                  <Text style={styles.introTitle}>Loki Phim</Text>
                   <Text style={styles.introSubTitle}>
-                     Study anywhere according to your needs
+                     Enjoin that moment!!!
                   </Text>
                   <View style={{marginTop:moderateScale(50)}}>
                      <View style={styles.groupSearch}>
                         <TextInput 
                            style={styles.searchInput}
-                           placeholder='Tìm kiếm khóa học'
+                           placeholder='Tìm kiếm phim'
                            onChangeText={text => setSearch(text)}
                            // onEndEditing={() => navigation.navigate('ListLesson', {name:search})}
                         />
@@ -101,38 +99,38 @@ const Home = ({navigation}) => {
                      </View>
                      <GroupVideo
                         amount={45}
-                        title='Kĩ năng chuyên ngành'
-                        color='#049ad1'
-                        onPress={() => navigation.navigate('ListLesson', {name:'Kĩ năng chuyên ngành'})}
+                        title='Phim hot nhất'
+                        color='#009da6'
+                        // onPress={() => navigation.navigate('ListLesson', {name:'Kĩ năng chuyên ngành'})}
                      />
                      <GroupVideo
                         amount={27}
-                        title='Kiến thức cần có'
-                        color='#049ad1'
-                        onPress={() => navigation.navigate('ListLesson', {name:'Kiến thức cần có'})}
+                        title='Phim mới cập nhật'
+                        color='#009da6'
+                        // onPress={() => navigation.navigate('ListLesson', {name:'Kiến thức cần có'})}
                      />
                   </View>
                </View>
             </ImageBackground>
             <Text style={styles.courseTitle}>
-               Các khóa học chung:
+               Phim hành động mới:
             </Text>
             <View style={{alignItems:'center'}}>
                <FlatList 
-                  data={dataSkillCourse}
+                  data={dataActionPhim}
                   keyExtractor={item => item.id}
                   renderItem={({item, index}) => (
-                     <GeneralCourse 
+                     <ActionPhim 
                         name={item.name}
                         amount={item.amount}
                         image={item.image}
-                        onPress={() => navigation.navigate('ListLesson', {name:item.name})}
+                        onPress={() => navigation.navigate('ActionPhim', {name:item.name, id: item.id})}
                      />
                   )}
                />
                <TouchableOpacity style={styles.allCourse} onPress={() => navigation.navigate('ListCourse', {name:'chung'})}>
                   <View style={{flexDirection:'row', alignItems:'center'}}>
-                     <Text style={styles.allCourseTitle}>Xem tất cả khóa học </Text>
+                     <Text style={styles.allCourseTitle}>Xem tất cả Phim </Text>
                      <Icon name='md-chevron-forward' style={{color:'#fff'}} size={moderateScale(16)} />
                   </View>
                </TouchableOpacity>
@@ -149,7 +147,7 @@ const Home = ({navigation}) => {
                   keyExtractor={item => item.id}
                   renderItem={({item, index}) => (
                      <PrivateCourse 
-                        onPress={() => navigation.navigate('ListLesson', {name:item.title})}
+                        // onPress={() => navigation.navigate('ListLesson', {name:item.title})}
                         title={item.title}
                         teacher={item.teacher}
                         image={item.image}
@@ -200,7 +198,7 @@ const GroupVideo = (props) => {
       </View>
    )
 }
-const GeneralCourse = (props) => {
+const ActionPhim = (props) => {
    const {onPress, name, amount, image} = props
 
    return(

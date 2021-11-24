@@ -1,25 +1,94 @@
-export const dataSkillCourse =[
+export const dataActionPhim =[
   {
     id:0,
-    name:'Bussiness Development',
+    name:'Phim Trung Quốc',
     amount:40,
-    image:'https://media.istockphoto.com/photos/business-and-education-background-picture-id671101136?k=20&m=671101136&s=170667a&w=0&h=IRW440E5O4UWMO0wRHdkTaNgdO6DzD_VnEqzJ-XAl0M='
+    image:'https://media.istockphoto.com/photos/business-and-education-background-picture-id671101136?k=20&m=671101136&s=170667a&w=0&h=IRW440E5O4UWMO0wRHdkTaNgdO6DzD_VnEqzJ-XAl0M=',
+    children:[
+      {
+        id:0, 
+        name:'Nữ võ sĩ xinh đẹp',
+        thumnail:'https://i.ytimg.com/vi/Ub9T4Ugr10Q/hqdefault.jpg',
+        videoUri:'Ub9T4Ugr10Q'
+      },
+      {
+        id:1, 
+        name:'Cẩm ý vệ tài năng',
+        thumnail:'https://i.ytimg.com/vi/wQ9pDLaqWC4/maxresdefault.jpg',
+        videoUri:'wQ9pDLaqWC4'
+      },
+      
+    ]
   },
   {
     id:1,
-    name:'Marketing',
+    name:'Phim Việt Nam',
     amount:35,
-    image:'https://st3.depositphotos.com/11351832/i/600/depositphotos_164406594-stock-photo-book-and-pencil-on-white.jpg'
+    image:'https://st3.depositphotos.com/11351832/i/600/depositphotos_164406594-stock-photo-book-and-pencil-on-white.jpg',
+    children:[
+      {
+        id:0, 
+        name:'Trả giá',
+        thumnail:'https://img.hplus.com.vn/728x409/banner/2017/12/15/833586-Tra-Gia.jpg',
+        videoUri:'ZqwpvlDLayc'
+      },
+      {
+        id:1, 
+        name:'Giang hồ ẩn danh',
+        thumnail:'https://i.ytimg.com/vi/LJZ9Kw96sAg/maxresdefault.jpg',
+        videoUri:'LJZ9Kw96sAg'
+      },
+      {
+        id:2, 
+        name:'Đại ca mắc bẫy ông trùm',
+        thumnail:'https://i.ytimg.com/vi/nSPstB9Ps9Y/maxresdefault.jpg',
+        videoUri:'nSPstB9Ps9Y'
+      },
+      {
+        id:3, 
+        name:'Ông trùm hàng trắng',
+        thumnail:'https://i.ytimg.com/vi/2SbnWjPCkFQ/maxresdefault.jpg',
+        videoUri:'2SbnWjPCkFQ'
+      },
+      
+    ]
   },
   {
     id:2,
-    name:'Sales',
+    name:'Phim Anh Mỹ',
     amount:20,
-    image:'https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815?k=20&m=1222550815&s=612x612&w=0&h=rpCDTbfE2_qBbt8IbISlr9Hx19Carbwpk_aU1e8E180='
+    image:'https://media.istockphoto.com/photos/row-of-books-on-a-shelf-multicolored-book-spines-stack-in-the-picture-id1222550815?k=20&m=1222550815&s=612x612&w=0&h=rpCDTbfE2_qBbt8IbISlr9Hx19Carbwpk_aU1e8E180=',
+    children:[
+      {
+        id:0, 
+        name:'Song sắt đẫm máu',
+        thumnail:'https://i.ytimg.com/vi/Gn2Si65VN1g/maxresdefault.jpg',
+        videoUri:'Gn2Si65VN1g'
+      },
+      {
+        id:1, 
+        name:'Biệt kích ngầm',
+        thumnail:'https://i.ytimg.com/vi/7Cc2wp17soM/maxresdefault.jpg',
+        videoUri:'3O32BEw2yMg'
+      },
+      {
+        id:2, 
+        name:'Sát thủ thợ máy',
+        thumnail:'https://static2.vieon.vn/vieplay-image/carousel_web_v4_ntc/2021/01/27/6dbroyok_4_master_bannerb3dda015a6e691559686c7b9f86072d9_1920_1080.webp',
+        videoUri:'b1L2Cf5_Cew'
+      },
+      {
+        id:3, 
+        name:'Tay lái siêu đẳng',
+        thumnail:'https://i.ytimg.com/vi/aA-Pj9clKw4/maxresdefault.jpg',
+        videoUri:'aA-Pj9clKw4'
+      },
+      
+    ]
   },
   {
     id:3,
-    name:'Information technology',
+    name:'Phim Ấn Độ',
     amount:15,
     image:'https://live.staticflickr.com/65535/50381111337_cecd087a46_b.jpg'
   },
